@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="index.css">
+
+  <title>CashTrack</title>
+</head>
+<body>
+
+  <div class="budget-container">
+
+    <div class="app-title">
+      CashTrack
+    </div>
+
+    <div class="budget-header">
+      <div class="balance">
+        <div class="title">balance</div> <div class="value"></div>
+      </div>
+
+      <div class="account">
+        <div class="income">
+          <div class="title">income</div> <div class="income-total"></div>
+        </div>
+        <div class="chart"></div>
+        <div class="outcome">
+          <div class="title">outcome</div> <div class="outcome-total"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-dashboard">
+
+      <div class="dash-title">Dashboard</div>
+      <div class="toggle">
+        <div class="tab1">Expenses</div>
+        <div class="tab2 active">income</div>
+        <div class="tab3">All</div>
+      </div>
+      <div class="hide" id="expenses"></div>
+      <div id="income">
+        <ul class="list">
+          <li id="0" class="income">
+            <div class="entry">Salary: $0000</div>
+            <div id="edit"></div>
+            <div id="delete"></div>
+          </li>
+        </ul>
+        <div class="input">
+          <input type="text" id="income-title-input" name="title" placeholder="title">
+          <input type="number" id="income-amount-input" name="amount" placeholder="$0">
+          <div class="add-income"><img src="assets/plus.png" alt=""></div>
+        </div>
+      </div>
+      <div class="hide" id="all"></div>
+
+    </div>
+
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
