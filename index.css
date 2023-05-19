@@ -1,0 +1,9 @@
+/* acitve btn */
+.active {
+  opacity: 1 !important;
+}
+
+/* hiding list */
+.hide {
+  display: none;
+}
