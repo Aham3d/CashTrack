@@ -27,7 +27,7 @@ expenseBtn.addEventListener('click', function() {
 });
 
 incomeBtn.addEventListener('click', function() {
-  active(incomeBtn); 
+  active(incomeBtn);
   inactive([expenseBtn, allBtn]); 
   show(incomeEl); 
   hide([expenseEl, allEL]);
@@ -37,5 +37,5 @@ allBtn.addEventListener('click', function() {
   active(allBtn); 
   inactive([expenseBtn, incomeBtn]); 
   show(allEL); 
-  hide([incomeEl, expenseEl]); 
+  hide([incomeEl, expenseEl]);
 });
