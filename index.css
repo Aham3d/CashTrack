@@ -38,10 +38,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.active {
-    opacity: 1;
-}
-
 .budget-container{
     position: absolute;
     width: 360px;
