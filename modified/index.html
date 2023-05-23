@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget App - JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>CashTrack</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="budget-container">
         <div class="app-title">
-            <a href="">Code<b>Explained</b></a>
+            <div class="logo">
+                <img src="icon/feather-solid.svg" alt="">
+            </div>
+            <a href="">Cash<b>Track</b></a>
         </div>
         <div class="budget-header">
             <div class="balance">
@@ -30,10 +38,9 @@
                         <small>$</small>0
                     </div>
                 </div>
-                <div class="chart"></div>
                 <div class="outcome">
                     <div class="title">
-                        Income
+                        Expenses
                     </div>
                     <div class="outcome-total">
                         <small>$</small>0
@@ -42,7 +49,6 @@
             </div>
         </div>
         <div class="budget-dashboard">
-            <div class="dash-title">Dashboard</div>
             <div class="toggle">
                 <div class="tab1">Expenses</div>
                 <div class="tab2">Income</div>
@@ -70,7 +76,6 @@
         </div>
     </div>
 
-    <script src="chart.js"></script>
-    <script src="budget.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

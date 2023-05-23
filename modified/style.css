@@ -1,124 +1,93 @@
-@font-face {
-    font-family: 'Gilroy';
-    src: url('font/Gilroy-Regular.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy Bold';
-    src: url('font/Gilroy-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
 body{
-    background-color: #222;
-    font-family: 'Gilroy';
+    background-color: #020304;
+    font-family: 'Quicksand', sans-serif;
 }
 
 *{
-    font-family: 'Gilroy';
+    font-family: 'Quicksand', sans-serif;    
     list-style: none;
     text-decoration: none;
-    -webkit-user-select: none;      
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-}
-
-/* REMOVE SPINNERS FROM NUMBER INPUT */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+    padding: none;
+    margin: none;
 }
 
 .budget-container{
-    position: absolute;
-    width: 360px;
-    height: 780px;
+    position: fixed;
+    width: 600px;
+    height: 100vh;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: #34006a;
+    background-color: #CACDCE;
 }
 
-.budget-container .app-title{
-    margin-top: 45px;
-    margin-left: 20px;
+.app-title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.4rem;
+    background-color: #020304;
+    width: 30%;
+    height: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 4%;
+    left: 50%;
 }
 
-.budget-container .app-title a{
-    color: #FFF;
-}
-.budget-container .app-title a b{
-    font-family: 'Gilroy Bold';
+.logo {
+    width: 25px;
+    filter: invert(95%) sepia(6%) saturate(86%) hue-rotate(149deg) brightness(87%) contrast(89%);
 }
 
-.budget-header{
-
+.app-title a{
+    color: #CACDCE;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .budget-header .balance{
-    margin-top: 45px;
-    margin-left: 20px;
-}
-
-.budget-header .balance .title{
-    color: #FFF;
-    font-size: 1em;
-    font-family: 'Gilroy Bold';
-}
-
-.budget-header .balance .value{
-    color: #FFF;
-    font-size: 2em;
-    margin-top: 10px;
-    font-family: 'Gilroy Bold';
+    font-size: 1.2rem;
+    color: #CACDCE;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.4rem;
+    background-color: #020304;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translateX(-50%) translateY(-50%);
+    top:  36%;
+    left: 50%;
+    border: 0.6rem solid #CACDCE;
 }
 
 .budget-header .account{
-    display: block;
-    width: 310px;
-    margin: 35px auto 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: fixed;
+    display: flex;
     line-height: 1.7em;
     text-align: center;
-    
+    justify-content: center;
+    gap: 25rem;
+    top:  35%;
+    left: 1.6rem;
 }
 
-.budget-header .account .income, .chart, .outcome{
-    height: 50px;
-    display: inline-block;
-    width: 100px;
-    vertical-align: middle;
-}
-
-.budget-header .account .income .title{
-    color: #FFF;
-    opacity: 0.5;
-}
-.budget-header .account .income .income-total{
-    color: #FFF;
-    font-family: 'Gilroy Bold';
-}
-
-.budget-header .account .outcome .title{
-    color: #FFF;
-    opacity: 0.5;
-}
 .budget-header .account .outcome .outcome-total{
     color: #f0624d;
-    font-family: 'Gilroy Bold';
 }
 
 /*/////////////   DASHBOARD    /////////////*/
 .budget-dashboard{
-    display: block;
+    /* display: block; */
     width: 360px;
     height: 470px;
     background-color: #FFF;
@@ -132,7 +101,6 @@ input[type=number] {
     font-size: 1.7em;
     margin-left: 20px;
     margin-top: 30px;
-    font-family: 'Gilroy Bold';
 }
 
 .toggle{
@@ -146,7 +114,6 @@ input[type=number] {
     cursor: pointer;
     font-size: 1.1em;
     color: #1a0034;
-    font-family: 'Gilroy Bold';
     opacity: 0.4;
 }
 
@@ -203,7 +170,6 @@ input[type=number] {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    font-family: 'Gilroy Bold';
 }
 
 .budget-dashboard #all ul.list li #edit{
@@ -253,7 +219,6 @@ input[type=number] {
     width : 150px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
     margin: 5px;
     margin-left: 10px;
     border-radius: 10px 0 0 10px;
@@ -265,7 +230,6 @@ input[type=number] {
     width : 110px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
     margin: 5px;
     margin-left: -10px;
     border-radius: 0 10px 10px 0;
@@ -305,7 +269,6 @@ input[type=number] {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    font-family: 'Gilroy Bold';
     color: #f0624d;
 }
 
@@ -356,7 +319,6 @@ input[type=number] {
     width : 150px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
     margin: 5px;
     margin-left: 10px;
     border-radius: 10px 0 0 10px;
@@ -368,7 +330,6 @@ input[type=number] {
     width : 110px;
     padding-left: 10px;
     font-size: 1.2em;
-    font-family: 'Gilroy';
     margin: 5px;
     margin-left: -10px;
     border-radius: 0 10px 10px 0;
@@ -408,7 +369,6 @@ input[type=number] {
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    font-family: 'Gilroy Bold';
 }
 
 .budget-dashboard #income ul.list li #edit{

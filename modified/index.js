@@ -149,8 +149,6 @@ function updateUI(){
         showEntry(allList, entry.type, entry.title, entry.amount, index)
     });
 
-    updateChart(income, outcome);
-
     localStorage.setItem("entry_list", JSON.stringify(ENTRY_LIST));
 }
 
