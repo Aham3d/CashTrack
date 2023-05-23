@@ -1,7 +1,12 @@
-body{
-    background-color: #020304;
-    font-family: 'Quicksand', sans-serif;
+:root {
+    --clr-primary: #2cdae0;
+    --clr-secondary: #1f90e7;
+    --clr-green: hsl(147, 100%, 37%);
+    --clr-red: hsl(0, 94%, 59%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
 }
+
 
 *{
     font-family: 'Quicksand', sans-serif;    
@@ -19,7 +24,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: #CACDCE;
+    background: linear-gradient(to top,var(--clr-primary), var(--clr-secondary));
 }
 
 .app-title {
@@ -29,12 +34,13 @@ body{
     justify-content: center;
     padding: 1rem;
     gap: 0.4rem;
-    background-color: #020304;
+    background-color: var(--clr-black);
     width: 30%;
-    height: 60%;
+    height: 50%;
     transform: translateX(-50%) translateY(-50%);
-    top: 4%;
+    top: 5%;
     left: 50%;
+    
 }
 
 .logo {
@@ -43,14 +49,14 @@ body{
 }
 
 .app-title a{
-    color: #CACDCE;
+    color: var(--clr-white);
     font-weight: 500;
     font-size: 1.2rem;
 }
 
-.budget-header .balance{
+.balance{
     font-size: 1.2rem;
-    color: #CACDCE;
+    color: var(--clr-white);
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -58,67 +64,86 @@ body{
     justify-content: center;
     padding: 1rem;
     gap: 0.4rem;
-    background-color: #020304;
+    background: var(--clr-black);
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     transform: translateX(-50%) translateY(-50%);
-    top:  36%;
+    top:  32%;
     left: 50%;
-    border: 0.6rem solid #CACDCE;
+    border: 0.55rem solid var(--clr-red);
 }
 
-.budget-header .account{
+.account{
     font-size: 1.2rem;
-    font-weight: 500;
-    position: fixed;
     display: flex;
     line-height: 1.7em;
     text-align: center;
     justify-content: center;
-    gap: 25rem;
+    gap: 20rem;
+    position: fixed;
+    left: 4.4rem;
     top:  35%;
-    left: 1.6rem;
 }
 
-.budget-header .account .outcome .outcome-total{
-    color: #f0624d;
+/* .account .income {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid #2dc428;
+    position: fixed;
+    left: 6rem;
+    top:  32%;
+
+}
+
+.account .outcome {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid #e51d1d;
+    position: fixed;
+    right: 6rem;
+    top:  32%;
+} */
+
+.outcome-total{
+    color: var(--clr-red);
 }
 
 /*/////////////   DASHBOARD    /////////////*/
 .budget-dashboard{
-    /* display: block; */
-    width: 360px;
-    height: 470px;
-    background-color: #FFF;
-    margin-top: 35px;
-    border-radius: 30px 30px 0 0;
-}
-
-.budget-dashboard .dash-title{
-    display: inline-block;
-    color: #1a0034;
-    font-size: 1.7em;
-    margin-left: 20px;
-    margin-top: 30px;
+    position: fixed;
+    width: 100%;
+    top: 45%;
 }
 
 .toggle{
-    display: block;
-    margin-top: 30px;
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1rem;
 }
 
 .toggle .tab1, .tab2, .tab3{
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
-    font-size: 1.1em;
-    color: #1a0034;
-    opacity: 0.4;
-}
-
-.toggle .tab2, .tab3{
-    margin-left: 10px;
+    font-size: 1.2rem;
+    color: var(--clr-black);
+    opacity: 0.6;
 }
 
 .active{
@@ -138,37 +163,30 @@ body{
 }
 
 /* ////////// ALL ///////////// */
-.budget-dashboard #all{
-    width: 360px;
-    height: 339px;
-    position: relative;
-}
 .budget-dashboard #all ul{
-    width: 360px;
-    height: 285px;
+    width: 100%;
+    height: 100%;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-top:20px;
+    padding: 2rem;
+    margin-top: 20px;
     overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
 }
 
-.budget-dashboard #all ul.list li{
-    position: relative;
-    font-size: 1em;
-}
-
-.budget-dashboard #all ul.list li *{
+li *{
     display: inline-block;
     height: 30px;
     vertical-align: middle;
+    font-size: 1rem;
+
 }
 
-.budget-dashboard #all ul.list li .entry{
-    width:250px;
-    height: auto;
-    padding-left: 20px;
-    margin-bottom: 10px;;
+.entry{
+    display: inline-block;
+    align-items: center;
     word-wrap: break-word;
 }
 
@@ -176,95 +194,83 @@ body{
     visibility: hidden;
 }
 
-.budget-dashboard #all ul.list li #delete{
-    position: absolute;
-    width:20px;
+#delete{
+    position: fixed;
+    width: 20px;
     height: 20px;
-    right: 20px;
+    right: 2rem;
     cursor: pointer;
     background-image: url('icon/trash.png');
     background-size: 20px 20px;
     background-repeat: no-repeat;
 }
 
-.budget-dashboard #all ul.list li.income{
-
-}
-.budget-dashboard #all ul.list li.expense{
+li.expense{
     color: #f0624d;
 }
 
 /* //////// EXPENSE ////////// */
-.budget-dashboard #expense{
-    width: 360px;
-    height: 339px;
-    position: relative;
+#expense{
+    width: 100%;
+    height: 100%;
 }
 
-.budget-dashboard #expense .input{
-    position: absolute;
-    display: block;
-    width: 360px;
+#expense .input{
+    position: fixed;
+    width: 100%;
     bottom: 0;
-    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1rem;
+    border-top: 1px solid black;
 }
 
-.budget-dashboard #expense .input *{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.budget-dashboard #expense .input input#expense-title-input{
+.input input#expense-title-input{
     height: 40px;
-    width : 150px;
-    padding-left: 10px;
-    font-size: 1.2em;
-    margin: 5px;
-    margin-left: 10px;
-    border-radius: 10px 0 0 10px;
     border: none;
+    font-size: 1rem;
+    text-align: center;
 }
 
-.budget-dashboard #expense .input input#expense-amount-input{
+.input input#expense-amount-input{
     height: 40px;
-    width : 110px;
-    padding-left: 10px;
-    font-size: 1.2em;
-    margin: 5px;
-    margin-left: -10px;
-    border-radius: 0 10px 10px 0;
+    font-size: 1rem;
     border: none;
+    text-align: center;
 }
 
-.budget-dashboard #expense .input .add-expense img{
+.add-expense img{
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
-.budget-dashboard #expense ul{
-    width: 360px;
-    height: 285px;
+#expense ul{
+    width: 100%;
     list-style: none;
     margin: 0;
-    padding: 0;
-    margin-top:20px;
+    padding: 2rem;
+    margin-top: 20px;
     overflow-x: auto;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0.75rem;
 }
 
-.budget-dashboard #expense ul.list li{
-    position: relative;
-    font-size: 1em;
-}
-
-.budget-dashboard #expense ul.list li *{
+#expense li{
+    font-size: 1rem;
     display: inline-block;
     height: 30px;
     vertical-align: middle;
+    font-size: 1rem;
 }
 
-.budget-dashboard #expense ul.list li .entry{
-    width:250px;
+#expense .entry{
+    width: 250px;
     height: auto;
     padding-left: 20px;
     margin-bottom: 10px;;
@@ -272,7 +278,7 @@ body{
     color: #f0624d;
 }
 
-.budget-dashboard #expense ul.list li #edit{
+#edit{
     position: absolute;
     width:20px;
     height: 20px;
@@ -281,13 +287,13 @@ body{
     background-image: url("icon/edit.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
-}
 
-.budget-dashboard #expense ul.list li #delete{
-    position: absolute;
-    width:20px;
+}
+#expense ul.list li #delete{
+    position: fixed;
+    width: 20px;
     height: 20px;
-    right: 20px;
+    right: 2rem;
     cursor: pointer;
     background-image: url('icon/trash.png');
     background-size: 20px 20px;
@@ -342,25 +348,25 @@ body{
     cursor: pointer;
 }
 
-.budget-dashboard #income ul{
-    width: 360px;
-    height: 285px;
+#income ul{
+    width: 100%;
     list-style: none;
     margin: 0;
-    padding: 0;
-    margin-top:20px;
+    padding: 2rem;
+    margin-top: 20px;
     overflow-x: auto;
-}
-
-.budget-dashboard #income ul.list li{
-    position: relative;
-    font-size: 1em;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0.75rem;
 }
 
 .budget-dashboard #income ul.list li *{
     display: inline-block;
     height: 30px;
     vertical-align: middle;
+    font-size: 1rem;
 }
 
 .budget-dashboard #income ul.list li .entry{
@@ -383,10 +389,10 @@ body{
 }
 
 .budget-dashboard #income ul.list li #delete{
-    position: absolute;
-    width:20px;
+    position: fixed;
+    width: 20px;
     height: 20px;
-    right: 20px;
+    right: 2rem;
     cursor: pointer;
     background-image: url('icon/trash.png');
     background-size: 20px 20px;
