@@ -7,9 +7,14 @@
     --clr-black: hsl(0, 0%, 0%);
 }
 
+body {
+    background-color: #8586c4;
+    font-family: 'Smokum', cursive;
+}
+
 
 *{
-    font-family: 'Quicksand', sans-serif;    
+    font-family: 'Ubuntu', sans-serif;
     list-style: none;
     text-decoration: none;
     user-select: none;
@@ -19,59 +24,49 @@
 
 .budget-container{
     position: fixed;
-    width: 600px;
+    width: 425px;
     height: 100vh;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: linear-gradient(to top,var(--clr-primary), var(--clr-secondary));
+    background: #7764b4;
 }
 
 .app-title {
     position: fixed;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 0.4rem;
-    background-color: var(--clr-black);
-    width: 30%;
-    height: 50%;
+    gap: 0.5rem;
     transform: translateX(-50%) translateY(-50%);
     top: 5%;
     left: 50%;
-    
 }
 
 .logo {
     width: 25px;
-    filter: invert(95%) sepia(6%) saturate(86%) hue-rotate(149deg) brightness(87%) contrast(89%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .app-title a{
     color: var(--clr-white);
-    font-weight: 500;
     font-size: 1.2rem;
 }
 
 .balance{
     font-size: 1.2rem;
-    color: var(--clr-white);
+    color: var(--clr-black);
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     gap: 0.4rem;
-    background: var(--clr-black);
-    border-radius: 50%;
-    width: 170px;
+    background-color: var(--clr-white);
+    border-radius: 10%;
+    width: 280px;
     height: 170px;
     transform: translateX(-50%) translateY(-50%);
     top:  32%;
     left: 50%;
-    border: 0.55rem solid var(--clr-red);
 }
 
 .account{
@@ -128,6 +123,7 @@
     position: fixed;
     width: 100%;
     top: 45%;
+    background-color: bl;
 }
 
 .toggle{
@@ -206,7 +202,7 @@ li *{
 }
 
 li.expense{
-    color: #f0624d;
+    color: var(--clr-red);
 }
 
 /* //////// EXPENSE ////////// */
@@ -221,24 +217,41 @@ li.expense{
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: space-around;
+    padding: 0.4rem 0;
     font-size: 1rem;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--clr-black);
+    overflow-x: hidden;
+    background-color: var(--clr-black);
 }
 
 .input input#expense-title-input{
-    height: 40px;
+    /* width: 100%; */
+    height: 25px;
     border: none;
     font-size: 1rem;
-    text-align: center;
+    padding: 0.5rem;
+    /* text-align: center; */
+    background-color: transparent;
+    border-bottom: 1px solid var(--clr-primary);
+    color: var(--clr-white);
 }
 
 .input input#expense-amount-input{
-    height: 40px;
+    /* width: 100%; */
+    height: 25px;
+    padding: 0.5rem;
     font-size: 1rem;
     border: none;
-    text-align: center;
+    /* text-align: center; */
+    background-color: transparent;
+    border-bottom: 1px solid var(--clr-primary);
+    color: var(--clr-white);
+}
+
+#expense-amount-input::placeholder, #expense-title-input::placeholder {
+    color: var(--clr-white);
+    opacity: 70%;
 }
 
 .add-expense img{
@@ -275,7 +288,7 @@ li.expense{
     padding-left: 20px;
     margin-bottom: 10px;;
     word-wrap: break-word;
-    color: #f0624d;
+    color: var(--clr-red);
 }
 
 #edit{
