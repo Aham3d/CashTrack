@@ -371,7 +371,7 @@ li.expense{
   right: 2.5rem;
   margin-top: 0.2rem;
   cursor: pointer;
-  background-image: url('icon/trash.png');
+  background-image: url('icon/');
   background-size: 20px 20px;
   background-repeat: no-repeat;
 }

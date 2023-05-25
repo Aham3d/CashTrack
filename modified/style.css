@@ -261,12 +261,16 @@ body {
     height: 20px;
     right: 1.5rem;
     cursor: pointer;
-    background-image: url('icon/trash.png');
+    background-image: url('icon/trash-solid.svg');
     background-size: 20px 20px;
 }
 
 #all .expense{
     color: var(--clr-red);
+}
+
+#all .income {
+    color: var(--clr-green);
 }
 
 /* //////// EXPENSE ////////// */
@@ -324,6 +328,10 @@ input::placeholder {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    display: flex;
+    padding: 0.3rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    border-left: 1px solid rgba(0, 0, 0, 0.379);
 }
 
 #expense ul{
@@ -360,7 +368,7 @@ input::placeholder {
     height: 20px;
     right: 3.5rem;
     cursor: pointer;
-    background-image: url("icon/edit.png");
+    background-image: url("icon/pen-solid.svg");
     background-size: 20px 20px;
 }
 
@@ -370,7 +378,7 @@ input::placeholder {
     height: 20px;
     right: 1.5rem;
     cursor: pointer;
-    background-image: url('icon/trash.png');
+    background-image: url('icon/trash-solid.svg');
     background-size: 20px 20px;
 }
 
@@ -380,6 +388,7 @@ input::placeholder {
     /* height: 339px; */
     position: absolute;
     top: 3rem;
+    color: var(--clr-green);
 }
 
 .budget-dashboard #income .input{
@@ -417,6 +426,11 @@ input::placeholder {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    display: flex;
+    padding: 0.3rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    border-left: 1px solid rgba(0, 0, 0, 0.379);
+    
 }
 
  #income ul{
@@ -441,7 +455,7 @@ input::placeholder {
  
 #income .entry{
     width: 250px;
-    /* height: auto; */
+    /* height: auto; */ 
     padding-left: 1.5rem;
     word-wrap: break-word;
 }
@@ -452,7 +466,7 @@ input::placeholder {
     height: 20px;
     right: 3.5rem;
     cursor: pointer;
-    background-image: url("icon/edit.png");
+    background-image: url("icon/pen-solid.svg");
     background-size: 20px 20px;
 }
 
@@ -462,6 +476,6 @@ input::placeholder {
     height: 20px;
     right: 1.5rem;
     cursor: pointer;
-    background-image: url('icon/trash.png');
+    background-image: url('icon/trash-solid.svg');
     background-size: 20px 20px;
 }
