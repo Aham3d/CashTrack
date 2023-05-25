@@ -156,8 +156,8 @@ function showEntry(list, type, title, amount, id){
 
     const entry = ` <li id = "${id}" class="${type}">
                         <div class="entry">${title}: $${amount}</div>
-                        <div id="edit"></div>
-                        <div id="delete"></div>
+                        <div title="edit?" id="edit"></div>
+                        <div title="delete" id="delete"></div>
                     </li>`;
 
     const position = "afterbegin";

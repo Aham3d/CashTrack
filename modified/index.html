@@ -16,7 +16,7 @@
     <div class="budget-container">
         <div class="app-title">
             <div class="logo">
-                <img src="icon/feather-solid.svg" alt="">
+                <img src="icon/icon-reaction.svg" alt="">
             </div>
             <a href="">Cash<b>Track</b></a>
             <div class="check">
@@ -46,16 +46,17 @@
                         <small>₹</small>0
                     </div>
                     <div class="title">
-                        Outcome
+                        Expenses
                     </div>
                 </div>
             </div>
         </div>
         <div class="budget-dashboard">
             <div class="toggle">
-                <div class="tab3 active">All</div>
-                <div class="tab1">Expenses</div>
-                <div class="tab2">Income</div>
+                <div class="tab1" title="expenses"><img src="icon/circle-down-solid.svg" alt=""></div>
+                <div class="tab2" title="income"><img src="icon/circle-down-solid.svg" alt=""></div>
+                <div class="tab3 active" title="show all">All</div>
+
 
             </div>
             <div class="hide" id="income">
@@ -63,7 +64,7 @@
                 <div class="input">
                     <input type="text" id="income-title-input" name="title" placeholder="Title">
                     <input type="number" id="income-amount-input" name="amount" placeholder="₹0">
-                    <div class="add-income"><img src="icon/circle-plus-solid.svg" alt=""></div>
+                    <div class="add-income" title="add"><img src="icon/circle-plus-solid.svg" alt=""></div>
                 </div>
             </div>
             <div class="hide" id="expense">
@@ -71,7 +72,7 @@
                 <div class="input">
                     <input type="text" id="expense-title-input" name="title" placeholder="Title">
                     <input type="number" id="expense-amount-input" name="amount" placeholder="₹0">
-                    <div class="add-expense"><img src="icon/circle-plus-solid.svg" alt=""></div>
+                    <div class="add-expense" title="add"><img src="icon/circle-plus-solid.svg" alt=""></div>
                 </div>
             </div>
             <div id="all">

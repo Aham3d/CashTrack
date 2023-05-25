@@ -34,21 +34,23 @@ body {
 .app-title {
     position: fixed;
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0.5rem; */
     transform: translateX(-50%) translateY(-50%);
     top: 5%;
     left: 50%;
 }
 
-.logo {
-    width: 25px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+.logo img{
+    width: 30px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    margin-top: 0.3rem;
 }
 
 .app-title a{
     color: var(--clr-white);
     font-size: 1.2rem;
-
 }
 
 
@@ -134,13 +136,13 @@ body {
 
 .outcome-total , .income-total{
     margin-top: 4rem;
-    font-weight: 300;
+    /* font-weight: 300; */
     font-size: 1.2rem;
 }
 
 .account .title {
     font-size: 0.8rem;
-    font-weight: 300;
+    /* font-weight: 300; */
     color: rgb(255, 255, 255);
 }
 
@@ -193,20 +195,46 @@ body {
 .toggle{
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-evenly;
     gap: 2rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
 }
 
 .toggle .tab1, .tab2, .tab3{
     cursor: pointer;
     font-size: 1rem;
-    color: rgb(255, 255, 255);
-    opacity: 0.6;
+    opacity: 0.4;
+}
+
+.tab3 {
+    background-color: black;
+    color: white;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    /* padding: 0.2rem; */
+}
+
+.tab1 img {
+    width: 30px;
+    height: 30px;
+    background-origin: var(--clr-white);
+    transform: rotate(180deg);
+}
+
+
+.tab2 img {
+    width: 30px;
+    height: 30px;
 }
 
 .active{
     opacity : 1 !important;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+
 }
 
 .hide{
@@ -263,6 +291,8 @@ body {
     cursor: pointer;
     background-image: url('icon/trash-solid.svg');
     background-size: 20px 20px;
+    /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); */
+
 }
 
 #all .expense{
@@ -310,6 +340,9 @@ input::placeholder {
     border-radius: 10px 0 0 10px;
     border: none;
     background-color: #140e9a;
+    border-right: 1px solid rgba(255, 255, 255, 0.626);
+    color: var(--clr-white);
+
 }
 
 #expense .input input#expense-amount-input{
@@ -322,6 +355,8 @@ input::placeholder {
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: #140e9a;
+    color: var(--clr-white);
+
 }
 
 #expense .add-expense img{
@@ -410,6 +445,8 @@ input::placeholder {
     border-radius: 10px 0 0 10px;
     border: none;
     background-color: #140e9a;
+    color: var(--clr-white);
+
 }
 
  #income .input input#income-amount-input{
@@ -420,6 +457,8 @@ input::placeholder {
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: #140e9a;
+    color: var(--clr-white);
+
 }
 
  #income .input .add-income img{
