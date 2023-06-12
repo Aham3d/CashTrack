@@ -4,64 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget App - JavaScript</title>
-    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>CashTrack</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="budget-container">
         <div class="app-title">
-            <a href="">Code<b>Explained</b></a>
+            <div class="logo">
+                <img src="icon/icon-reaction.svg" alt="">
+            </div>
+            <a href="">Cash<b>Track</b></a>
+            <div class="check">
+
+            </div>
         </div>
         <div class="budget-header">
             <div class="balance">
-                <div class="title">
-                    Balance
-                </div>
                 <div class="value">
-                    <small>$</small>0
+                    <small>₹</small>0
                 </div>
-            </div>
+                <div class="title">
+                    Total Balance
+                </div>
+            </div> 
             <div class="account">
                 <div class="income">
+                    <div class="income-total">
+                        <small>₹</small>0
+                    </div>
                     <div class="title">
                         Income
-                    </div>
-                    <div class="income-total">
-                        <small>$</small>0
                     </div>
                 </div>
-                <div class="chart"></div>
                 <div class="outcome">
-                    <div class="title">
-                        Income
-                    </div>
                     <div class="outcome-total">
-                        <small>$</small>0
+                        <small>₹</small>0
+                    </div>
+                    <div class="title">
+                        Expenses
                     </div>
                 </div>
             </div>
         </div>
         <div class="budget-dashboard">
-            <div class="dash-title">Dashboard</div>
             <div class="toggle">
-                <div class="tab1">Expenses</div>
-                <div class="tab2">Income</div>
-                <div class="tab3 active">All</div>
+                <div class="tab1" title="expenses"><img src="icon/circle-down-solid.svg" alt=""></div>
+                <div class="tab2" title="income"><img src="icon/circle-down-solid.svg" alt=""></div>
+                <div class="tab3 active" title="show all">All</div>
+
+
             </div>
             <div class="hide" id="income">
                 <ul class="list"></ul>
                 <div class="input">
                     <input type="text" id="income-title-input" name="title" placeholder="Title">
-                    <input type="number" id="income-amount-input" name="amount" placeholder="$0">
-                    <div class="add-income"><img src="icon/plus.png" alt=""></div>
+                    <input type="number" id="income-amount-input" name="amount" placeholder="₹0">
+                    <div class="add-income" title="add"><img src="icon/circle-plus-solid.svg" alt=""></div>
                 </div>
             </div>
             <div class="hide" id="expense">
                 <ul class="list"></ul>
                 <div class="input">
                     <input type="text" id="expense-title-input" name="title" placeholder="Title">
-                    <input type="number" id="expense-amount-input" name="amount" placeholder="$0">
-                    <div class="add-expense"><img src="icon/plus.png" alt=""></div>
+                    <input type="number" id="expense-amount-input" name="amount" placeholder="₹0">
+                    <div class="add-expense" title="add"><img src="icon/circle-plus-solid.svg" alt=""></div>
                 </div>
             </div>
             <div id="all">
@@ -70,8 +81,6 @@
         </div>
     </div>
 
-    <script src="functions.js"></script>
-    <script src="events.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
