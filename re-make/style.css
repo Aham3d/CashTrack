@@ -1,0 +1,539 @@
+:root {
+    --clr-background: #ebe1e0;
+    --clr-secondary-bg: #e1d2d1;
+    --clr-txt: rgb(9, 9, 17);
+    --clr-primary: #a0736e;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
+}
+
+body {
+    background-color: black;
+}
+
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    padding: none;
+    margin: none;
+}
+
+.budget-container{
+    position: fixed;
+    width: 425px;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: var(--clr-background);
+}
+
+.app-title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0.5rem; */
+    transform: translateX(-50%) translateY(-50%);
+    top: 5%;
+    left: 50%;
+}
+
+.app-title a{
+    color: var(--clr-txt);
+}
+
+.logo img{
+    width: 30px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    margin-top: 0.3rem;
+}
+
+.app-title a{
+    font-size: 1.2rem;
+}
+
+
+.balance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-black);
+    background-color: var(--clr-secondary-bg);
+    width: 320px;
+    height: 150px;
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2rem;
+}
+
+.balance .title {
+    font-size: 0.9rem;
+    opacity: 60%;
+}
+
+.balance small {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.3rem;
+    position: fixed;
+    left: 50%;
+    top:  40%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--clr-primary);
+    width: 319px;
+    height: 150px;
+    z-index: -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 10px 30px 100px -5px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.account .income {
+    background-color: var(--clr-primary);
+    width: 160px;
+    height: 150px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.account .outcome {
+    background-color: var(--clr-primary);
+    width: 160px;
+    height: 150px;
+    border-bottom-right-radius: 20px;    
+    border-bottom-left-radius: 20px;
+    box-shadow: rgba(5, 5, 9, 0.25) 0px 5px 10px -10px, rgba(0, 0, 0, 0.3) 0px 30px 60px -5px;    
+    /* z-index: -1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.income-total {
+    color: var(--clr-green);
+}
+
+.outcome-total{
+    color: var(--clr-red);
+}
+
+.outcome-total , .income-total{
+    margin-top: 4rem;
+    /* font-weight: 300; */
+    font-size: 1.2rem;
+    color: var(--clr-txt);
+}
+
+.account .title {
+    font-size: 0.8rem;
+    /* font-weight: 300; */
+    color: var(--clr-txt);
+    opacity: 70%;
+}
+
+.account small {
+    font-size: 1rem;
+    margin-right: 0.1rem;
+
+}
+
+.account .income-total small {
+    color: var(--clr-green);
+}
+
+.account .outcome-total small {
+    color: var(--clr-red);
+}
+
+/* .account .income {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid #2dc428;
+    position: fixed;
+    left: 6rem;
+    top:  32%;
+
+}
+
+.account .outcome {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid #e51d1d;
+    position: fixed;
+    right: 6rem;
+    top:  32%;
+} */
+
+
+/*/////////////   DASHBOARD    /////////////*/
+.budget-dashboard{
+    position: fixed;
+    width: 100%;
+    top: 55%;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    /* padding-left: 2rem; */
+}
+
+.toggle .tab1, .tab2, .tab3{
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0.4;
+}
+
+.tab3 {
+    background-color: black;
+    color: white;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    /* padding: 0.2rem; */
+}
+
+.tab1 img {
+    width: 30px;
+    height: 30px;
+    background-origin: var(--clr-white);
+    transform: rotate(180deg);
+}
+
+
+.tab2 img {
+    width: 30px;
+    height: 30px;
+}
+
+.active{
+    opacity : 1 !important;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(100deg) brightness(100%) contrast(100%);
+}
+
+.hide{
+    display: none;
+}
+
+/* ////////// ALL ///////////// */
+#all{
+    width: 100%;
+    /* height: 339px; */
+    position: absolute;
+    top: 4rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#all ul{
+    width: 100%;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+#all li {
+    position: relative;
+    font-size: 1rem;
+}
+
+#all li *{
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+}
+
+#all .entry{
+    width: auto;
+    /* height: auto; */
+    padding-left: 1.5rem;
+    /* margin-bottom: 0.5rem; */
+    word-wrap: break-word;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#all #edit{
+    visibility: hidden;
+}
+
+#all #delete{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 1.5rem;
+    cursor: pointer;
+    background-image: url('assets/trash-solid.svg');
+    background-size: 20px 20px;
+    filter: invert(2%) sepia(5%) saturate(9%) hue-rotate(20deg) brightness(9%) contrast(20%);
+}
+
+#all .expense{
+    color: var(--clr-txt);
+}
+
+#all .income {
+    color: var(--clr-txt);
+}
+
+/* //////// EXPENSE ////////// */
+
+input::placeholder {
+    color: var(--clr-txt);
+    opacity: 40%;
+    font-weight: 300;
+}
+
+.budget-dashboard #expense {
+    width: 100%;
+    /* height: 339px; */
+    position: absolute;
+    top: 4rem;
+}
+
+.budget-dashboard #expense .input {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0.5rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-txt);
+}
+
+#expense .input input#expense-title-input{
+    height: 38px;
+    width : 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+    /* margin: 5px; */
+    /* margin-left: 10px; */
+    /* border-radius: 10px 0 0 10px; */
+    border: none;
+    background-color: var(--clr-secondary-bg);
+
+}
+
+#expense .input input#expense-amount-input{
+    height: 38px;
+    width : 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+    /* margin: 5px; */
+    /* margin-left: -10px; */
+    /* border-radius: 0 10px 10px 0; */
+    border: none;
+    background-color: var(--clr-secondary-bg);
+
+}
+
+#expense .add-expense img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    padding: 0.3rem;
+    filter: invert(98%) sepia(2%) saturate(1908%) hue-rotate(187deg) brightness(98%) contrast(96%);
+}
+
+#expense ul{
+    width: 100%;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+#expense li{
+    position: relative;
+    font-size: 1rem;
+}
+
+#expense li *{
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+}
+
+#expense .entry{
+    width: 250px;
+    /* height: auto; */
+    padding-left: 1.5rem;
+    word-wrap: break-word;
+    color: var(--clr-red);
+}
+
+#expense .entry span {
+    padding-top: 0.9rem;
+}
+
+#expense #edit{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 3.5rem;
+    cursor: pointer;
+    background-image: url("assets/pen-solid.svg");
+    background-size: 20px 20px;
+}
+
+#expense #delete{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 1.5rem;
+    cursor: pointer;
+    background-image: url('assets/trash-solid.svg');
+    background-size: 20px 20px;
+    filter: invert(2%) sepia(5%) saturate(9%) hue-rotate(20deg) brightness(9%) contrast(20%);
+}
+
+.expense::placeholder {
+    opacity: 70%;
+}
+
+/* /////// INCOME //////// */
+.budget-dashboard #income{
+    width: 100%;
+    /* height: 339px; */
+    position: absolute;
+    top: 4rem;
+    color: var(--clr-green);    
+}
+
+.budget-dashboard #income .input{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0.5rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-txt);
+}
+
+ #income .input input#income-title-input{
+    height: 38px;
+    width : 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--clr-secondary-bg);
+
+}
+
+ #income .input input#income-amount-input{
+    height: 38px;
+    width : 100%;
+    padding-left: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--clr-secondary-bg);
+
+}
+
+ #income .input .add-income img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    padding: 0.3rem;
+    /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); */
+    border-left: 1px solid rgba(0, 0, 0, 0.379);
+    /* background-color: var(--clr-primary); */
+    filter: invert(98%) sepia(2%) saturate(1908%) hue-rotate(187deg) brightness(98%) contrast(96%);
+
+}
+
+ #income ul{
+    width: 100%;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+ #income ul.list li{
+    position: relative;
+    font-size: 1rem;
+}
+
+ #income ul.list li *{
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+}
+ 
+#income .entry{
+    width: 250px;
+    /* height: auto; */ 
+    padding-left: 1.5rem;
+    word-wrap: break-word;
+}
+
+.budget-dashboard #income ul.list li #edit{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 3.5rem;
+    cursor: pointer;
+    background-image: url("assets/pen-solid.svg");
+    background-size: 20px 20px;
+}
+
+.budget-dashboard #income ul.list li #delete{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 1.5rem;
+    cursor: pointer;
+    background-image: url('assets/trash-solid.svg');
+    background-size: 20px 20px;
+    filter: invert(2%) sepia(5%) saturate(9%) hue-rotate(20deg) brightness(9%) contrast(20%);
+}
+
+.income input::placeholder {
+    opacity: 70%;
+}
